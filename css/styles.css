@@ -17,7 +17,7 @@
     --first-color-darken: #050810;
     --text-color: #ffffff;
     --first-color-light: #EAE7E6;
-    --first-color-lighten: #FFFAFA;
+    --first-color-lighten: #FFFFFF;
 
     /* ======== FONT & TYPOGRAPHY ======== */
     --body-font: 'Poppins',sans-serif;
@@ -136,6 +136,19 @@ img{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
 }
+
+/* ======== DARKMODE ======== */
+.section-dark{
+    background-color: var(--first-color-dark);
+    color: var(--first-color-lighten);
+}
+
+.dark{
+    color: var(--first-color-lighten);
+}
+
+
+
 /* ======== NAV ======== */
 .nav__logo{
     font-size: 1.6rem;
@@ -168,9 +181,28 @@ img{
     top: 1rem;
     right: 1rem;
     font-size: 3.4rem;
-    color: white;
+    color: var(--first-color-lighten);
     cursor: pointer;
 
+}
+
+.nav__dark{
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 20%;
+    background-color: var(--first-color-lighten);
+    border-radius: 50px;
+    border-style: none;
+    color: var(--first-color-darken);
+    font-size: 2rem;
+    transition: .3s;
+    padding: 9px;
+
+}
+
+.nav__dark:hover{
+    transform: scale(1.1);
 }
 
 .nav__item{
@@ -182,7 +214,7 @@ img{
     font-size: 1.5rem;
     text-transform: uppercase;
     transition: .3s;
-    color: white;
+    color: var(--first-color-lighten);
 }
 
 .nav__link:hover{
@@ -232,17 +264,37 @@ img{
         color: var(--first-color);
         font-weight: var(--font-bold);
         margin-bottom: 0;
+        transition: .5s;
     }
 
     .home__profession{
         font-size: var(--small--font-size);
         color: var(--first-color-dark);
         margin-bottom: var(--mb-5);
+        animation: types 2s steps(11);
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid var(--first-color);
+        width: 20ch;
+    }
+
+    @keyframes types{
+        0% {
+            width: 0ch;
+        }
+
+        50% {
+            width: 20ch;
+        }
+    
+        100% {
+            width: 20ch;
+        }
     }
     .home__social-link{
         display: inline-flex;
         background-color: var(--first-color);
-        color: white;
+        color: var(--first-color-lighten);
         font-size: 2rem;
         border-radius: 10%;
         padding: .20rem;
@@ -254,7 +306,7 @@ img{
 
     .home__social-link:hover{
         background-color:var(--first-color-dark);
-        color: white;
+        color: var(--first-color-lighten);
         transform: scale(1.1);
     }
 
@@ -266,7 +318,7 @@ img{
     .button{
         display: inline-block;
         background-color: var(--first-color);
-        color:white;
+        color:var(--first-color-lighten);
         padding: 1rem 2rem;
         border-radius: .5rem;
         transition: .3s;
@@ -276,17 +328,17 @@ img{
     .button:hover{
 
         background-color:var(--first-color-dark);
-        color: white;
+        color: var(--first-color-lighten);
         transform: scale(1.1);
     }
 
     .button__light{
-        background-color:white;
+        background-color:var(--first-color-lighten);
         color: var(--first-color-dark);
     }
 
     .button__light:hover{
-        background-color:white;
+        background-color:var(--first-color-lighten);
         color: var(--first-color-dark);
     }
 
@@ -490,7 +542,7 @@ border-radius: 50%;
 .works__link {
     display: inline-flex;
     font-size: 3rem;
-    color: white;
+    color: var(--first-color-lighten);
     padding: 1rem;
     border-radius: 50%;
     background-color: rgba(17,0,127,0.3);
@@ -499,7 +551,7 @@ border-radius: 50%;
 
 .works__title{
     font-size: var(--h2--font-size);
-    color: whitesmoke;
+    color: var(--first-color-lighten);
 }
 
 .works__img:hover .works__data{
@@ -570,7 +622,7 @@ border-radius: 50%;
 
 .footer__link{
     display: inline-flex;
-    color: white;
+    color: var(--first-color-lighten);
     font-size: 2rem;
     border-radius: 50%;
     padding: .40rem;
@@ -580,6 +632,35 @@ border-radius: 50%;
 
 .footer__link:hover{
     transform: scale(1.2);
+}
+
+/* ======== DarkMode  ======== */
+
+
+.darkmode__button{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    outline: none;
+    border-radius: 50%;
+    background: var(--first-color-dark);
+    border-color: var(--first-color-dark);
+    color: var(--first-color-lighten);
+    font-size: 2rem;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.darkmode__button:hover{
+    transform: scale(1.2);
+}
+
+
+.dark-mode{
+    background-color: var(--first-color-dark);
+    color: var(--first-color-light);
+
 }
 
 /* ======== MEDIAQUERIES  ======== */
