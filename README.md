@@ -1,4 +1,4 @@
-# portfolio
+# My Personal Portfolio
 My Personal Portfolio made with Javascript , HTML &amp; CSS
 
 <img src="https://i.imgur.com/D77SvwA.png">
