@@ -549,6 +549,7 @@ border-radius: 50%;
 .works__title{
     font-size: var(--h2--font-size);
     color: var(--first-color-lighten);
+    text-align: center;
 }
 
 .works__img:hover .works__data{
