@@ -1,7 +1,11 @@
 /* ======== MENU SHOW & HIDDEN ======== */
 const navMenu = document.getElementById("nav-menu"),
     toggleMenu = document.getElementById("nav-toggle"),
-    closeMenu = document.getElementById("nav-close")
+    closeMenu = document.getElementById("nav-close"),
+    darkBtn = document.getElementById("dark-mode"),
+    Sections = document.querySelectorAll("section"),
+    _SectionsTitle = document.querySelectorAll("section-title"),
+    _SectionsSubTitle = document.querySelectorAll("section-subtitle")
 
 
     //SHOW
@@ -46,4 +50,3 @@ function scrollActive(){
 
     })
 }
-
